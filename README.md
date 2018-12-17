@@ -10,8 +10,6 @@ The aim of this repository is to provide complex examples to the Python programm
 - Visualisation
 - Machine Learning
 
-
-
 The course is covered as interactive Jupyter notebooks which makes things considerably easier. In order to follow this course, we recommend you download Python using the Anaconda distribution (found [here](https://www.anaconda.com/download/)) as this also provides most of the packages used in this course.
 
 ***
