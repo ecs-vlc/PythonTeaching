@@ -68,6 +68,11 @@ Users will become very familiar with basic plots, and will progress onto animate
 
 ***
 
+Inspirations: 
+1. https://github.com/ageron/handson-ml
+
+***
+
 The course is covered as interactive Jupyter notebooks which makes things considerably easier. In order to follow this course, we recommend you download Python using the Anaconda distribution (found [here](https://www.anaconda.com/download/)) as this also provides most of the packages used in this course.
 
 ***
