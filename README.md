@@ -62,7 +62,7 @@ With large amounts of data, this presents challenges as to how to articulate res
 
 We introduce a number of different packages, most of which are built on `Matplotlib`, ported from *MATLAB*, and include `Seaborn` and `Plotly`. 
 
-![Unable to display image](https://github.com/gregparkes/PythonCourse/04-Visualization/sample_img.eps)
+![Unable to display image](https://github.com/gregparkes/PythonCourse/04-Visualization/sample_img.png)
 
 Users will become very familiar with basic plots, and will progress onto animated and interactive plots to model complex problems that change in space and time. 
 
@@ -70,6 +70,7 @@ Users will become very familiar with basic plots, and will progress onto animate
 
 Inspirations: 
 1. https://github.com/ageron/handson-ml
+2. https://github.com/jakevdp/PythonDataScienceHandbook
 
 ***
 
