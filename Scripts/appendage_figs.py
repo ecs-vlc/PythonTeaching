@@ -26,7 +26,7 @@ from sklearn.svm import SVC
 from sklearn.preprocessing import PolynomialFeatures
 from sklearn.linear_model import LinearRegression
 from sklearn.cluster import KMeans
-from sklearn.mixture import GMM
+from sklearn.mixture import GaussianMixture
 from sklearn.decomposition import PCA
 from sklearn.manifold import Isomap
 from sklearn.metrics import pairwise_distances_argmin
@@ -860,7 +860,7 @@ def demo_covariance_GMM_type():
     X = np.dot(rng.randn(500, 2), rng.randn(2, 2))
 
     for i, cov_type in enumerate(['diag', 'spherical', 'full']):
-        model = GMM(1, covariance_type=cov_type).fit(X)
+        model = GaussianMixture(1, covariance_type=cov_type).fit(X)
         ax[i].axis('equal')
         ax[i].scatter(X[:, 0], X[:, 1], alpha=0.5)
         ax[i].set_xlim(-3, 3)
