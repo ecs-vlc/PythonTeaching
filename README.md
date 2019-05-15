@@ -1,10 +1,10 @@
-# Python Course
+# LearnPython
 
-Welcome to this Python Course.
+Welcome to *LearnPython*.
 
 The aim of this repository is to provide complex examples to the Python programming language and extended libraries. It contains many *multidisciplinary* examples to write code for, on a range of coding topic areas, particularly for research purposes.
 
-## Principles
+## Principles and Basics
 
 In principles we aim to cover the basics of the Python programming language and more - in this module we draw only from internal modules/packages that are in-built into the language. We start from saying 'Hello World'; a classic introduction to any programming language:
 
@@ -62,7 +62,7 @@ With large amounts of data, this presents challenges as to how to articulate res
 
 We introduce a number of different packages, most of which are built on `Matplotlib`, ported from *MATLAB*, and include `Seaborn` and `Plotly`. 
 
-![Unable to display image](https://github.com/gregparkes/PythonCourse/04-Visualization/sample_img.png)
+![Unable to display image](https://github.com/gregparkes/PythonCourse/tree/master/04-Visualization/sample_img.png)
 
 Users will become very familiar with basic plots, and will progress onto animated and interactive plots to model complex problems that change in space and time. 
 
@@ -79,3 +79,5 @@ The course is covered as interactive Jupyter notebooks which makes things consid
 ***
 
 Ensure that any use of this material is appropriately referenced and in compliance with the license.
+
+All rights reserved.
