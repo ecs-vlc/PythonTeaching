@@ -7,6 +7,7 @@ Created on Wed May 29 17:05:54 2019
 """
 
 import numpy as np
+import dask.array as da
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d.axes3d import Axes3D
 plt.rcParams['figure.figsize'] = 15, 10
@@ -88,3 +89,44 @@ def task_5():
 
 
 # task 6
+def EU_dask(N, dt, R, dW, X_0=1.):
+    step_f = lambda X_n, dW_n, dt, lamba=2., mu=1.: X_n + lamba*X_n*dt + mu*X_n*dW_n
+    # set up
+    X = np.zeros((R, N), dtype=np.float_)
+    X[:, 0] = X_0
+    # loop
+    for n in range(N-1):
+        X[:, n + 1] = step_f(X[:, n], dW[:, n], dt)
+    return da.from_array(X, chunks=(R//2, N//2))
+
+
+def f_exact_dask(t, W, lamba=2., mu=1., X_0=1.):
+    X_e = np.zeros_like(W)
+    # loop
+    for d in range(W.shape[0]):
+        X_e[d, :] = X_0 * np.exp((mu*W[d, :]) + (lamba - .5*mu**2) * t)
+    return da.from_array(X_e, chunks=(100, t.shape[0]//2))
+
+
+def task_6():
+    # set up
+    N = np.logspace(2, 5, 6, dtype=np.int_)
+    E = np.zeros_like(N)
+    R = 100
+    # loop
+    for i, n in enumerate(N):
+        t, dt = np.linspace(0, 1, n+1, retstep=True)
+        dW = (da.sqrt(dt) * da.random.normal(0, 1, size=(R, n+1),
+                     chunks=(R//2, n//2)))
+        W = da.cumsum(dW, axis=0) - dW[0, :]
+        # calculate X directly
+        X = EU_dask(t.shape[0], dt, R, dW)
+        X_exact = f_exact_dask(t, W)
+        # calculate error
+        E[i] = da.linalg.norm(X - X_exact).compute()
+
+    # plot
+    plt.loglog(1 / N, E, 'x-')
+    plt.xlabel(r"$\log 1/N$")
+    plt.ylabel(r"$\log E$")
+    plt.show()
