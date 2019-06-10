@@ -23,5 +23,3 @@ def task_3():
 
 def task_4():
     return tips.sort_values(by=["smoker","tip"], ascending=[False, False]).iloc[:10, :]
-
-

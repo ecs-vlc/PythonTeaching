@@ -12,6 +12,11 @@ Requirements:
 4. `matplotlib`
 5. Other performance libraries (optional); `cython`, `numba`
 
+Prerequisites:
+
+1. Basic level of Python
+2. `itertools`
+
 ## Basics to NumPy
 
 **NumPy** is a core library package for scientific computing in Python, whereby it provides a high-performance multi-dimensional array/matrix object, written in C with a Python header, and a host of functions for array creation, access, manipulation and deletion. For example arrays are created as:

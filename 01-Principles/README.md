@@ -11,6 +11,10 @@ Internal packages we draw on include:
 3. `os`
 4. `sys`
 
+Prerequisites:
+
+1. NONE
+
 ## Basics of Python
 
 In the first section, you will cover:
