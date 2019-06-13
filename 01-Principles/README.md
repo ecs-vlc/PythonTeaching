@@ -40,16 +40,16 @@ In the first section, you will cover:
 We begin with a classical introduction to learning any programming language - saying hello to the world!
 
 ```python
-print("Hello world!")
->>> Hello world!
+>>> print("Hello world!")
+Hello world!
 ```
 
 Python is a non-staticly typed language, that is to say that the object *type* is not declared explicitly, but implicitly created for the programmer:
 
 ```python
-my_int = 7
-type(my_int)
->>> int
+>>> my_int = 7
+>>> type(my_int)
+int
 ```
 
 compared to a compiled-language such as **C**:
@@ -62,9 +62,9 @@ x = "four"; // FAILS
 There are a number of powerful Python objects, such as **lists**, **tuples** and **dictionaries**:
 
 ```python
-my_list = []
-my_tuple = ()
-my_dict = {}
+>>> my_list = []
+>>> my_tuple = ()
+>>> my_dict = {}
 ```
 
 Where these object store multiple values of different object types together. For loops, classes and functions, it is very important to have correct *indentation*, usually a tab character `\t` or 4 spaces:
@@ -91,19 +91,19 @@ The second section includes more advanced features of the basic platform, includ
 In addition to familiar structures in other programming languages such as for loops, Python has nice abstractions such as *list comprehensions*:
 
 ```python
-list_comp = [i for i in range(10)]
-print(list_comp)
->>> [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+>>> list_comp = [i for i in range(10)]
+>>> print(list_comp)
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 ```
 
 this is the same as:
 
 ```python
-list_comp = []
-for i in range(10):
-	list_comp.append(i)
-print(list_comp)
->>> [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+>>> list_comp = []
+>>> for i in range(10):
+>>>		list_comp.append(i)
+>>> print(list_comp)
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 ```
 
 Sets are another incredibly powerful object, which are unique lists of elements (ints, strings) from which you can perform intersect and union-like operations.
@@ -111,8 +111,8 @@ Sets are another incredibly powerful object, which are unique lists of elements 
 A nice port from other scripting-style languages is the use of `lambda` and other operations:
 
 ```python
-import math
-f = lambda x: math.cos(x**2) - math.sin(x)
+>>> import math
+>>> f = lambda x: math.cos(x**2) - math.sin(x)
 ```
 
 equivalent to creating a shorthand internal function. 
@@ -124,10 +124,10 @@ The third section includes the internal package `itertools`, which derives a num
 In-built Python bears the concept of an *iterator*, for example the `range(n)` object when created, doesn't actually instantiate `n` numbers, but rather creates an *iterator* from which numbers can be drawn in the execution on-the-fly. For example, let's say we want to cycle through every even number that exists, we can't do this procedurally due to the explosion in memory, but in declaration we can:
 
 ```python
-import itertools as it
-counter = it.count(start=0, step=2)
-list(next(counter) for _ in range(5))
->>> [0, 2, 4, 6, 8]
+>>> import itertools as it
+>>> counter = it.count(start=0, step=2)
+>>> list(next(counter) for _ in range(5))
+[0, 2, 4, 6, 8]
 ```
 
 They are also powerful for handling *recurrent relations*, since we can declare these *generator* objects such as `cycle` or `repeat`. For example we can encode the Fibonacci sequence trivially as:
@@ -145,11 +145,11 @@ fibs = fibs()
 Perhaps you want to generate all of the combinations between two vectors: `itertools` can return an *iterator* for you to go through this potentially massive list at your leisure:
 
 ```python
-import itertools as it
-ranks = [2, 3, 4, 5, 6, 7, 8, 9, 10, "J", "Q", "K", "A"]
-suits = ["H", "D", "S", "C"]
-it.product(ranks, suits)
->>> <itertools.product object at 0x7fa360548f9438cd92>
+>>> import itertools as it
+>>> ranks = [2, 3, 4, 5, 6, 7, 8, 9, 10, "J", "Q", "K", "A"]
+>>> suits = ["H", "D", "S", "C"]
+>>> it.product(ranks, suits)
+<itertools.product object at 0x7fa360548f9438cd92>
 ```
 
 And many more cumulative interactions between lists and other Python objects.
@@ -159,10 +159,10 @@ And many more cumulative interactions between lists and other Python objects.
 The fourth section includes the complex string manipulation library `re` or **Regex** for short. Regular expressions essentially act as a language for complex string manipulation and search. Regex strings are *compiled* into a series of bytecodes which are executed by a matching engine written in *C*. They are particularly useful for processing strings that have a known/inherent structure in them, for example postcodes, addresses, email addresses, URLs or HTML tags, for instance:
 
 ```python
-import re
-p = re.compile("[a-z]+")
-print(p)
->>> re.compile(r'[a-z]+', re.UNICODE)
+>>> import re
+>>> p = re.compile("[a-z]+")
+>>> print(p)
+re.compile(r'[a-z]+', re.UNICODE)
 ```
 
 Will match one or more lowercase characters between 'a' and 'z', i.e all of them. 

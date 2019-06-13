@@ -53,13 +53,42 @@ Lemons 	1
 dtype: int64
 ```
 
-A lot of the functionalities from `numpy` map over to Pandas, except that the index allows for elementwise mapping between Pandas `Series` or `DataFrame` objects.
+A lot of the functionalities from `numpy` map over to Pandas, except that the index allows for elementwise mapping between Pandas `Series` or `DataFrame` objects. One of the key advantages of `pandas` over `numpy` is the intuitive handling of missing data:
+
+```python
+>>> import pandas as pd
+>>> a = pd.Series([1, 2, 3])
+>>> b = pd.Series([3, 4])
+>>> a + b
+0	4.0
+1	6.0
+2	NaN
+dtype: float64
+```
+
+Where these uneven sizes would throw an exception in `numpy`, `pandas` handles this sort of operation gracefully, with options to override this default NaN behaviour if desired.
+
+## Pandas Intermediate
+
+The second section expands on the knowlege of `pandas` by giving the user access to some powerful features, including:
+- Hierarchical Indexing
+- Multi-Index/Columns
+- Categorical types
+- Introduction to Time-series
+- Concat and Append
+- Merge and Joins
+- GroupBy
+- Reshaping
+- Pivot Tables
+
+
 
 ***
 
 Inspirations: 
-1. https://github.com/jakevdp/PythonDataScienceHandbook
+1. Teaching material from [Jake Vanderplas](https://github.com/jakevdp/PythonDataScienceHandbook)
 2. The [Pandas cookbook](https://pandas.pydata.org/pandas-docs/stable/user_guide/cookbook.html)
+3. The [World Bank](https://data.worldbank.org/)
 ***
 
 The course is covered as interactive Jupyter notebooks which makes things considerably easier. In order to follow this course, we recommend you download Python using the Anaconda distribution (found [here](https://www.anaconda.com/download/)) as this also provides most of the packages used in this course.

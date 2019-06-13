@@ -22,38 +22,38 @@ Prerequisites:
 **NumPy** is a core library package for scientific computing in Python, whereby it provides a high-performance multi-dimensional array/matrix object, written in C with a Python header, and a host of functions for array creation, access, manipulation and deletion. For example arrays are created as:
 
 ```python
-import numpy as np
-np.array([1., 2., 3.])
->>> array([1., 2., 3.])
+>>> import numpy as np
+>>> np.array([1., 2., 3.])
+array([1., 2., 3.])
 ```
 
 By default, NumPy arrays are float64-bit. We can create random numbers using the following:
 
 ```python
-import numpy as np
-np.random.rand(5, 2)
->>> array([[.664, .234, .113, .764, .987],
-		   [.096, .338, .654, .622, .491]])
+>>> import numpy as np
+>>> np.random.rand(5, 2)
+array([[.664, .234, .113, .764, .987],
+	   [.096, .338, .654, .622, .491]])
 ```
 
 One of the most powerful aspects of NumPy is to perform vector or matrix operations across all the values in an array with one function, rather than needing to iterate over every element in a vector:
 
 ```python
-import numpy as np
-x = np.zeros(5, 2)
-y = np.random.rand(5,2)
-print(x - y)
->>> array([[-0.012, -0.455, -0.365, -0.776, -0.199],
-		   [-0.542, -0.611, -0.848, -0.209, -0.674]])
+>>> import numpy as np
+>>> x = np.zeros(5, 2)
+>>> y = np.random.rand(5,2)
+>>> print(x - y)
+array([[-0.012, -0.455, -0.365, -0.776, -0.199],
+	   [-0.542, -0.611, -0.848, -0.209, -0.674]])
 ```
 
 Or aggregate vectors or matrices together:
 
 ```python
-import numpy as np
-x = np.random.normal(0, 1., size=(10000,))
-print(np.mean(x))
->>> 0.0016746
+>>> import numpy as np
+>>> x = np.random.normal(0, 1., size=(10000,))
+>>> print(np.mean(x))
+0.0016746
 ```
 
 There is this, and much more within this comprehensive basics introduction.
@@ -74,8 +74,8 @@ With **NumPy** acting as the bread-and-butter for scientific computing, SciPy ex
 It is recommended that only the packages you need from SciPy are imported, given that the ecosystem is very large. For example if we just wanted Linear Algebra we could:
 
 ```python
-from scipy import linalg
-b = linalg.solve(A, x)
+>>> from scipy import linalg
+>>> b = linalg.solve(A, x)
 ```
 
 To get a solid grasp of this package, you'll have to work through the notebook!
@@ -85,10 +85,10 @@ To get a solid grasp of this package, you'll have to work through the notebook!
 The `dask` framework builds on top of NumPy and/or Pandas (a later library) to essentially provide flexible parallel computing for analytics. `dask` functions are similar to `itertools` as they are declarative and produce a task graph which is then executed when `.compute()` is called:
 
 ```python
-import dask.array as da
-x = da.random.randn((100000,100000), chunks=(1000,1000)).mean()
-print(x.compute())
->>> 0.0000145366
+>>> import dask.array as da
+>>> x = da.random.randn((100000,100000), chunks=(1000,1000)).mean()
+>>> print(x.compute())
+0.0000145366
 ```
 
 here we specify a `chunks` parameter whereby `dask` breaks this large array into the chunksize specified and computes them individually, then aggregating the results together.
