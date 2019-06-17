@@ -73,8 +73,6 @@ Where these uneven sizes would throw an exception in `numpy`, `pandas` handles t
 The second section expands on the knowlege of `pandas` by giving the user access to some powerful features, including:
 - Hierarchical Indexing
 - Multi-Index/Columns
-- Categorical types
-- Introduction to Time-series
 - Concat and Append
 - Merge and Joins
 - GroupBy
