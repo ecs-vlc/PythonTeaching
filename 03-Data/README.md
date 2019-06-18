@@ -79,7 +79,62 @@ The second section expands on the knowlege of `pandas` by giving the user access
 - Reshaping
 - Pivot Tables
 
+One of the advantages in Pandas is the flexibility and ease to generate and use MultiIndexes:
 
+```python
+>>> index=[("California",2000), ("California",2010),
+	   ("New York",2000), ("New York",2010)]
+>>> population=[33871648, 37253956, 18976457, 19378102]
+>>> pop=pd.Series(population,index=index)
+>>> pop
+(California, 2000)    33871648
+(California, 2010)    37253956
+(New York, 2000)      18976457
+(New York, 2010)      19378102
+```
+
+From here we can index a slice based on this multiple-index:
+
+```python
+>>> pop[("California",2010):("New York",2010)]
+(California, 2010)    37253956
+(New York, 2000)      18976457
+(New York, 2010)      19378102
+```
+
+Or we can manipulate this multi-index directly by creating a `pandas.MultiIndex` object:
+
+```python
+>>> pd.MultiIndex.from_tuples(index)
+MultiIndex(levels=[['California', 'New York'], [2000, 2010]],
+           labels=[[0, 0, 1, 1], [0, 1, 0, 1]])
+```
+
+## Pandas Advanced
+
+The third and final section on extensive Pandas touches on some of the most complex areas of Pandas, including:
+- Vectorized string operations
+- Categorical types
+- Time-Series
+- Pipes and Method Chaining
+- Sparsity
+- High-performance Pandas
+
+For example, dates and times are an integral part of the Pandas package, particularly in relation to indexing time-series data:
+
+```python
+>>> dates = pd.DatatimeIndex(["2014-07-04","2014-08-04","2015-07-04","2015-08-04"])
+>>> data = pd.Series([0, 1, 4, 2], index=dates)
+>>> data
+2014-07-04    0
+2014-08-04    1
+2015-07-04    4
+2015-08-04    2
+```
+
+Since Pandas was built with financial modelling in mind, we go into some depth particularly with time-series data analysis and stock price modelling.
+
+![Image not found](images/goog_stock.svg)
 
 ***
 

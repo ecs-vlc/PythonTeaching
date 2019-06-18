@@ -78,6 +78,10 @@ It is recommended that only the packages you need from SciPy are imported, given
 >>> b = linalg.solve(A, x)
 ```
 
+In addition, `scipy` provides a suite of basic image processing functions to adjust and manipulate images of varying sizes.
+
+![Image not found](cats.svg)
+
 To get a solid grasp of this package, you'll have to work through the notebook!
 
 ## Dask arrays
