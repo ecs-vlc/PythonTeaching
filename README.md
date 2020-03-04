@@ -1,8 +1,36 @@
-# LearnPython
+# Advanced Python Repository for Researchers and Students
 
-Welcome to *LearnPython*.
+Welcome to *University of Southampton VLC* repository 
+for python learning and development.
 
-The aim of this repository is to provide complex examples to the Python programming language and extended libraries. It contains many *multidisciplinary* examples to write code for, on a range of coding topic areas, particularly for research purposes.
+The aim of this repository is to provide complex examples 
+to the Python programming language and extended libraries.
+ It contains many *multidisciplinary* examples to write 
+ code for, on a range of coding topic areas, particularly 
+ for research purposes.
+ 
+## Topics covered
+
+In this repository we break down areas of 
+knowledge into the following categories:
+1. **Basics**: Learning the python programming language and
+ in-built libraries
+2. **Scientific Computing and Simulation**: Learning packages `numpy`, `scipy` and `dask`, 
+with a wealth of application problem domains to explore, 
+including Monte Carlo, Stochastic Differential Equations and more. The performance
+aspects of simulation are also explored in detail. 
+3. **Data analysis**: Learning how to load, preprocess, munge and work with
+tabular relational datasets using `pandas`, with additional focus on networks
+using `networkx`.
+4. **Visualisation**: Learning the best practices for visualising results
+from a model or dataset, beginning with low-level tools like `matplotlib` but moving
+on to interactive tools like `bokeh`, `plotly` and `seaborn`.
+5. **Machine Learning**: Learning the basics of machine learning from a
+mathematical, statistical and applicational basis, including classification, regression,
+dimensionality reduction and clustering using `sklearn`.
+
+We recommend you explore them in the order presented, but there is no hard
+prerequisite for any section.
 
 ## Principles and Basics
 
@@ -68,40 +96,33 @@ Users will become very familiar with basic plots, and will progress onto animate
 
 ***
 
+### References
+
 Inspirations: 
 1. https://github.com/ageron/handson-ml
 2. https://github.com/jakevdp/PythonDataScienceHandbook
+3. Wikipedia
+
+### Installation
+
+Requirements for each subdirectory are stated in the respective README files.
 
 ***
 
-The course is covered as interactive Jupyter notebooks which makes things considerably easier. In order to follow this course, we recommend you download Python using the Anaconda distribution (found [here](https://www.anaconda.com/download/)) as this also provides most of the packages used in this course.
+We have further notebooks which weren't clearly grouped into a particular section
+added in the `Extras/` folder.
+
+The course is covered as interactive Jupyter notebooks which 
+makes things considerably easier. In order to follow this 
+course, we recommend you download Python using the
+ Anaconda distribution
+  (found [here](https://www.anaconda.com/download/)) as 
+  this also provides most of the packages used 
+  in this course.
 
 ***
 
-Ensure that any use of this material is appropriately referenced and in compliance with the license.
+Ensure that any use of this material is appropriately 
+referenced and in compliance with the license.
 
 All rights reserved.
-
-### License 
-
-MIT License
-
-Copyright (c) 2018-19 Gregory Parkes
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.

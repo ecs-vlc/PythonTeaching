@@ -1,3 +1,5 @@
+# this script generates HTML versions of the jupyter notebooks to view in a web browser.
+
 # clear away current files
 echo "[Clearing existing files]"
 rm -r ViewDocs/*
