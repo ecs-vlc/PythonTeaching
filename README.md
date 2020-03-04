@@ -126,3 +126,5 @@ Ensure that any use of this material is appropriately
 referenced and in compliance with the license.
 
 All rights reserved.
+
+**Original Owner**: Gregory Parkes, see contributions and page [here](https://github.com/gregparkes/). Transferred over to VLC on 04/03/2020.
